@@ -1,2 +1,2 @@
-# carpet-meow-addition
+# Carpet-Meow-Addition
 A Carpet Addition
