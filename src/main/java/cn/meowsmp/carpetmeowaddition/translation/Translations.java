@@ -1,4 +1,4 @@
-package org.meow.carpetmeowaddition.translation;
+package cn.meowsmp.carpetmeowaddition.translation;
 
 import carpet.CarpetSettings;
 import com.google.common.reflect.TypeToken;

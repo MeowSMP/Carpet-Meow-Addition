@@ -13,10 +13,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "org.meow.carpetmeowaddition.client.CarpetMeowAdditionClient"
+      "cn.meowsmp.carpetmeowaddition.client.CarpetMeowAdditionClient"
     ],
     "main": [
-      "org.meow.carpetmeowaddition.CarpetMeowAddition"
+      "cn.meowsmp.carpetmeowaddition.CarpetMeowAddition"
     ]
   },
   "mixins": [

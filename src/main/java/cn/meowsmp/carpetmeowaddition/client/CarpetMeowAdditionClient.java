@@ -1,4 +1,4 @@
-package org.meow.carpetmeowaddition.client;
+package cn.meowsmp.carpetmeowaddition.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
