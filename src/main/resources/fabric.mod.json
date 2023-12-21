@@ -9,7 +9,7 @@
     "repo": "https://github.com/MeowSMP/Carpet-Meow-Addition"
   },
   "license": "MIT",
-  "icon": "assets/carpet-meow-addition/icon.png",
+
   "environment": "*",
   "entrypoints": {
     "client": [
