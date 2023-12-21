@@ -1,4 +1,4 @@
-package org.meow.carpetmeowaddition;
+package cn.meowsmp.carpetmeowaddition;
 
 import carpet.api.settings.Rule;
 import carpet.api.settings.RuleCategory;
