@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "carpet-meow-addition",
+  "version": "${version}",
+  "name": "Carpet-Meow-Addition",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/MeowSMP/Carpet-Meow-Addition"
+  },
+  "license": "MIT",
+  "icon": "assets/carpet-meow-addition/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.meow.carpetmeowaddition.client.CarpetMeowAdditionClient"
+    ],
+    "main": [
+      "org.meow.carpetmeowaddition.CarpetMeowAddition"
+    ]
+  },
+  "mixins": [
+    "carpet-meow-addition.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
