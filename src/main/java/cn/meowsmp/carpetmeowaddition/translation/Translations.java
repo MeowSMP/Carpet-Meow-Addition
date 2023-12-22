@@ -50,7 +50,7 @@ public class Translations {
         Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
         Map<String, String> lang = gson.fromJson(dataJSON, new TypeToken<Map<String, String>>() {
         }.getType());
-        // 将翻译文件添加到集合，下次获取时，直接从文件获取
+        // 将翻译文件添加到集合，下次获取时，直接从集合获取
         LANG.put(language, lang);
         return lang;
     }

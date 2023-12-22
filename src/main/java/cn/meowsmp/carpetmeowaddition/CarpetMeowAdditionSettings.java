@@ -10,9 +10,9 @@ public class CarpetMeowAdditionSettings {
 
     public static final String MEOW = "Meow";
 
-    //测试
+    // 简易更新跳略器
     @Rule(
             categories = {MEOW, RuleCategory.SURVIVAL}
     )
-    public static boolean test = false;
+    public static boolean simpleUpdateSkipper = false;
 }
