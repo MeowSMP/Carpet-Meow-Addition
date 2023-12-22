@@ -15,4 +15,10 @@ public class CarpetMeowAdditionSettings {
             categories = {MEOW, RuleCategory.SURVIVAL}
     )
     public static boolean simpleUpdateSkipper = false;
+
+    // 易碎深板岩
+    @Rule(
+            categories = {MEOW, RuleCategory.SURVIVAL}
+    )
+    public static boolean softDeepslate = false;
 }
