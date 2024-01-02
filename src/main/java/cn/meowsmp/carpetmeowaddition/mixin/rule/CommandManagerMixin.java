@@ -1,6 +1,7 @@
 package cn.meowsmp.carpetmeowaddition.mixin.rule;
 
 import cn.meowsmp.carpetmeowaddition.command.PlayerManagerCommand;
+import cn.meowsmp.carpetmeowaddition.command.RegisterCarpetCommands;
 import cn.meowsmp.carpetmeowaddition.command.UuidCommand;
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.command.CommandRegistryAccess;
@@ -19,9 +20,8 @@ public class CommandManagerMixin {
     @Final
     private CommandDispatcher<ServerCommandSource> dispatcher;
 
-    @Inject(method = "<init>", at = @At("TAIL"))
+    @Inject(method = "<init>", at = @At("RETURN"))
     private void register(CommandManager.RegistrationEnvironment environment, CommandRegistryAccess commandRegistryAccess, CallbackInfo ci) {
-        UuidCommand.register(dispatcher);
-        PlayerManagerCommand.register(dispatcher);
+        RegisterCarpetCommands.registerCarpetCommands(dispatcher, environment, commandRegistryAccess);
     }
 }
