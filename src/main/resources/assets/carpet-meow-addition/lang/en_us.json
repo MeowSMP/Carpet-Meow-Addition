@@ -4,5 +4,7 @@
   "carpet.rule.softDeepslate.name": "易碎深板岩",
   "carpet.rule.softDeepslate.desc": "改变深板岩的硬度使其和普通石头一致",
   "carpet.rule.commandUuid.name": "获取UUID",
-  "carpet.rule.commandUuid.desc": "启用/uuid命令用来获取实体的UUID"
+  "carpet.rule.commandUuid.desc": "启用/uuid命令用来获取实体的UUID",
+  "carpet.rule.commandPlayerManager.name": "玩家管理器",
+  "carpet.rule.commandPlayerManager.desc": "启用/playerManager命令用来管理假玩家"
 }

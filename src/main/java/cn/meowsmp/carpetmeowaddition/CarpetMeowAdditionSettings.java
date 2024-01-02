@@ -22,11 +22,17 @@ public class CarpetMeowAdditionSettings {
     )
     public static boolean softDeepslate = false;
 
-
     // 获取uuid
     @Rule(
             categories = {MEOW, RuleCategory.SURVIVAL},
             options = {"true", "false", "ops", "0", "1", "2", "3", "4"}
     )
     public static String commandUuid = "ops";
+
+    // 玩家管理器命令
+    @Rule(
+            categories = {MEOW, RuleCategory.SURVIVAL},
+            options = {"true", "false", "ops", "0", "1", "2", "3", "4"}
+    )
+    public static String commandPlayerManager = "ops";
 }

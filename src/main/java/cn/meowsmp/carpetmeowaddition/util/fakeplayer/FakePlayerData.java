@@ -267,7 +267,7 @@ public class FakePlayerData {
         File[] files = getFile(context).listFiles();
         if (files != null) {
             for (File file : files) {
-                try (BufferedReader jsonReader = new BufferedReader(new FileReader(file))) {
+                try (BufferedReader jsonReader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8))) {
                     Gson gson = new Gson();
                     JsonObject jsonObject = gson.fromJson(jsonReader, JsonObject.class);
                     if (isDesignatedFile(playerName, jsonObject)) {
@@ -293,7 +293,7 @@ public class FakePlayerData {
                 -> CommandSource.suggestMatching(Arrays.stream(Objects.requireNonNull(getFile(context.getSource().getServer()).listFiles()))
                 .map(file -> {
                     try {
-                        BufferedReader br = new BufferedReader(new FileReader(file));
+                        BufferedReader br = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8));
                         try (br) {
                             Gson gson = new Gson();
                             JsonObject jsonObject = gson.fromJson(br, JsonObject.class);
@@ -319,7 +319,7 @@ public class FakePlayerData {
                     continue;
                 }
                 try {
-                    BufferedReader jsonReader = new BufferedReader(new FileReader(file));
+                    BufferedReader jsonReader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8));
                     try (jsonReader) {
                         Gson gson = new Gson();
                         JsonObject jsonObject = gson.fromJson(jsonReader, JsonObject.class);
@@ -327,11 +327,11 @@ public class FakePlayerData {
                             showInfo(context, jsonObject);
                             return;
                         }
-                    } catch (IOException e) {
-                        CarpetMeowAddition.LOGGER.warn("处理文件" + file.getName() + "时出现意外问题");
                     }
                 } catch (FileNotFoundException e) {
                     CarpetMeowAddition.LOGGER.warn("找不到名为" + file.getName() + "的文件");
+                } catch (IOException e) {
+                    CarpetMeowAddition.LOGGER.warn("处理文件" + file.getName() + "时出现意外问题");
                 }
             }
         }
@@ -440,16 +440,16 @@ public class FakePlayerData {
                     continue;
                 }
                 try {
-                    BufferedReader jsonReader = new BufferedReader(new FileReader(file));
+                    BufferedReader jsonReader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8));
                     try (jsonReader) {
                         Gson gson = new Gson();
                         JsonObject jsonObject = gson.fromJson(jsonReader, JsonObject.class);
                         eachPlayerData(context, jsonObject);
-                    } catch (IOException e) {
-                        CarpetMeowAddition.LOGGER.warn("处理文件" + file.getName() + "时出现意外问题");
                     }
                 } catch (FileNotFoundException e) {
                     CarpetMeowAddition.LOGGER.warn("找不到名为" + file.getName() + "的文件");
+                } catch (IOException e) {
+                    CarpetMeowAddition.LOGGER.warn("处理文件" + file.getName() + "时出现意外问题");
                 }
             }
         }

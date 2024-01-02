@@ -1,6 +1,8 @@
 package cn.meowsmp.carpetmeowaddition.command;
 
 import carpet.patches.EntityPlayerMPFake;
+import carpet.utils.CommandHelper;
+import cn.meowsmp.carpetmeowaddition.CarpetMeowAdditionSettings;
 import cn.meowsmp.carpetmeowaddition.util.fakeplayer.FakePlayerData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -21,7 +23,8 @@ import java.nio.charset.StandardCharsets;
 
 public class PlayerManagerCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        dispatcher.register(CommandManager.literal("playerManager").requires(source -> true)
+        dispatcher.register(CommandManager.literal("playerManager")
+                .requires(source -> CommandHelper.canUseCommand(source, CarpetMeowAdditionSettings.commandPlayerManager))
                 .then(CommandManager.literal("save")
                         .then(CommandManager.argument("player", EntityArgumentType.player())
                                 .executes(context -> save(context, null))
