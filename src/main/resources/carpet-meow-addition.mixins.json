@@ -5,7 +5,10 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "rule.AbstractBlockStateMixin",
-    "rule.RedstoneWireBlockMixin"
+    "rule.CommandManagerMixin",
+    "rule.RedstoneWireBlockMixin",
+    "rule.carpet.ActionAccessor",
+    "rule.carpet.EntityPlayerActionPackAccessor"
   ],
   "client": [
   ],

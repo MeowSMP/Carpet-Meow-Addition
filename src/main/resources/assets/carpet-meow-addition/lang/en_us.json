@@ -2,5 +2,7 @@
   "carpet.rule.simpleUpdateSkipper.name": "简易更新跳略器",
   "carpet.rule.simpleUpdateSkipper.desc": "通过让红石线不连接四周开启的活板门上的红石线来恢复1.20-pre2前的更新跳略器",
   "carpet.rule.softDeepslate.name": "易碎深板岩",
-  "carpet.rule.softDeepslate.desc": "改变深板岩的硬度使其和普通石头一致"
+  "carpet.rule.softDeepslate.desc": "改变深板岩的硬度使其和普通石头一致",
+  "carpet.rule.commandUuid.name": "获取UUID",
+  "carpet.rule.commandUuid.desc": "启用/uuid命令用来获取实体的UUID"
 }
