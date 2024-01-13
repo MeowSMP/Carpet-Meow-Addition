@@ -6,6 +6,7 @@
   "mixins": [
     "rule.AbstractBlockStateMixin",
     "rule.CommandManagerMixin",
+    "rule.RecipeManagerMixin",
     "rule.RedstoneWireBlockMixin",
     "rule.carpet.ActionAccessor",
     "rule.carpet.EntityPlayerActionPackAccessor"

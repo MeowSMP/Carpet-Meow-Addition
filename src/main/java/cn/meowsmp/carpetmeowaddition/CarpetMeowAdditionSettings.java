@@ -35,4 +35,9 @@ public class CarpetMeowAdditionSettings {
             options = {"true", "false", "ops", "0", "1", "2", "3", "4"}
     )
     public static String commandPlayerManager = "ops";
+    // 鞘翅合成保留物品
+    @Rule(
+            categories = {MEOW, RuleCategory.SURVIVAL}
+    )
+    public static boolean elytraRecipeRemainder = false;
 }
